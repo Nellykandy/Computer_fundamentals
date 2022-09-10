@@ -96,23 +96,23 @@ for decade in decade_index:
 fig = go.Figure(data = data, layout = default_layout)
 
 # updates to the default layout
-fig.update_layout(
-    {
-    "title": dict(
-            text = f"Top {top_num} Artists by Number of #1 Billboard Songs"
-        ),
-    "xaxis": dict(
-            categoryorder = 'array',
-            categoryarray = graph_data.index.get_level_values(0)
-        ),
-    "legend": dict(
-            orientation = "v",
-            x=.7,
-            y=.93,
-            traceorder="normal"
-        )
-    }
-)
+# fig.update_layout(
+#     {
+#     "title": dict(
+#             text = f"Top {top_num} Artists by Number of #1 Billboard Songs"
+#         ),
+#     "xaxis": dict(
+#             categoryorder = 'array',
+#             categoryarray = graph_data.index.get_level_values(0)
+#         ),
+#     "legend": dict(
+#             orientation = "v",
+#             x=.7,
+#             y=.93,
+#             traceorder="normal"
+#         )
+#     }
+# )
 
 # display the plot!
 iplot(fig)
