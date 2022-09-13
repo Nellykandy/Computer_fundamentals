@@ -47,41 +47,41 @@ def option1():
             print("%10s"%col,end=""),
         print('\n')
     
-# def option2():
-#     #Retrieve the details of the artist with the most top ranked songs    
-#     rows_srt = sorted(rows[1:], reverse=True, key=lambda x: x[3])
-#     # create new list for our subset
-#     rank = []
-#     # append 5 first from sorted list
-#     for row in rows_srt[:5]:
-#         rank.append(row)
-#         for col in row:
-#             print("%10s"%col,end=" "),
-#         print('\n')
-#     return rank
+def option2():
+    #Retrieve the details of the artist with the most top ranked songs    
+    rows_srt = sorted(rows[1:], reverse=True, key=lambda x: x[3])
+    # create new list for our subset
+    rank = []
+    # append 5 first from sorted list
+    for row in rows_srt[:5]:
+        rank.append(row)
+        for col in row:
+            print("%10s"%col,end=" "),
+        print('\n')
+    return rank
 
-# def option3():
-#     #  Retrieve the details of the 10 songs with the longest number of weeks on the board
-#     rows_srt = sorted(rows[1:], reverse=True, key=lambda x: x[6])
-#     rank = []
-#     for row in rows_srt[:10]:
-#         # parsing each column of a row
-#         for col in row:
-#             print("%10s"%col,end=" \t"),
-#         print('\n')
+def option3():
+    #  Retrieve the details of the 10 songs with the longest number of weeks on the board
+    rows_srt = sorted(rows[1:], reverse=True, key=lambda x: x[6])
+    rank = []
+    for row in rows_srt[:10]:
+        # parsing each column of a row
+        for col in row:
+            print("%10s"%col,end=" \t"),
+        print('\n')
 
-# def option4():
-#     #Visualise the top songs (the criteria for ‘top’ is up to you)
-#     import matplotlib.pyplot as plt
-#     top_songs = []
-#     rank = option2()
-#     for row in range(1, len(rank)):
-#         top_songs.append(rank[row][0])
-#     plt.grid()
-#     plt.barh(top_songs, width= 0.1)
-#     plt.title('the top songs')
-#     plt.xlabel('in percent')
-#     plt.xlabel('in percent')
+def option4():
+    #Visualise the top songs (the criteria for ‘top’ is up to you)
+    import matplotlib.pyplot as plt
+    top_songs = []
+    rank = option2()
+    for row in range(1, len(rank)):
+        top_songs.append(rank[row][0])
+    plt.grid()
+    plt.barh(top_songs, width= 0.1)
+    plt.title('the top songs')
+    plt.xlabel('in percent')
+    plt.xlabel('in percent')
 #     plt.show()
 # if __name__=='__main__':
 #     while(True):
